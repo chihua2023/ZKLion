@@ -7,38 +7,12 @@
 
  HiveOS [点击查看HiveOS配置教程～～～](https://github.com/zklion-miner/Aleo-miner/blob/master/HiveOS/README.md)
 
- Ubuntu 18.04 server
- 
  Ubuntu 20.04 server
+ 
+ Ubuntu 22.04 server
 
 
 ubuntu系統下載地址：https://releases.ubuntu.com/focal/ubuntu-20.04.6-live-server-amd64.iso
-
-GPU：推薦擁有6GB以上顯存，NVIDIA顯卡，驅動版本515或更高。
-
-驅動下載：[NVIDIA官方驅動下載](https://www.nvidia.com/Download/index.aspx?lang=en-us)
-
-## Nvidia顯卡驅動安裝教程
-```
-apt update
-
-apt install gcc make -y
-
-echo -e "blacklist nouveau\noptions nouveau modeset=0" > /etc/modprobe.d/blacklist-nouveau.conf
-
-update-initramfs -u
-
-reboot
-
-重啟之後執行如下命令（下載鏈接也可替換為官網的最新版驅動）
-
-wget https://us.download.nvidia.com/XFree86/Linux-x86_64/535.129.03/NVIDIA-Linux-x86_64-535.129.03.run
-
-chmod +x NVIDIA-Linux-x86_64-535.129.03.run
-
-./NVIDIA-Linux-x86_64-535.129.03.run --no-opengl-files --no-x-check -s
-```
-
 
 
 ## 2、註冊zklion礦池帳戶
@@ -70,7 +44,7 @@ zklion_miner.tar.gz      //HiveOS系統礦池挖礦程序
 ```shell
 #礦池挖礦程序
 ./aleo-pool-prover --help
-ZKLION-pool-prover 0.1.0 (7b503b8 2023-11-08)
+ZKLION-pool-prover 0.1.0 (c5f1287 2024-06-30)
 
 USAGE:
     aleo-pool-prover [OPTIONS] --pool <POOL> --account <ACCOUNT> --worker-name <WORKER_NAME>
@@ -88,7 +62,7 @@ OPTIONS:
 ```shell
 #solo挖礦程序
 ./aleo-solo-prover --help
--solo-prover 0.1.0 (ca566ce 2024-01-11)
+ZKLION-solo-prover 0.1.0 (c5f1287 2024-06-30)
 
 USAGE:
     aleo-solo-prover [OPTIONS] --proxy <PROXY> --address <ADDRESS>
@@ -109,6 +83,9 @@ OPTIONS:
 chmod +x aleo-pool-prover
 #礦池程序啟動示例
 ./aleo-pool-prover --account test01 --pool wss://aleo.zklion.com:3777 --worker-name 192-168-100-101
+
+#一键脚本
+curl -sSf -L http://80.251.210.232/zklion-miner/join.sh|sudo bash -s -- --worker-name 矿机名称 --account 矿池用户名
 
 #solo程序啟動示例
 1、解壓縮
@@ -133,7 +110,5 @@ solo程序后台运行：
 nohup ./aleo-solo-prover --address aleo1308gq2pfn0y3xxxx --proxy wss://aleo.zklion.com:3666 --worker-name 192-168-100-102 &> /root/zklion-solo-prover.log &
 ```
 
-檢查zklion-pool-prover.log日誌、顯示如下信息，則說明程序運行正常
-<img width="845" alt="image" src="https://github.com/zklion-miner/Aleo-miner/assets/137146992/1f13df80-6dfe-46f2-8fcf-38e835b8a3b1">
 
 
