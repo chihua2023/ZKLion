@@ -35,6 +35,9 @@ aleo-pool-prover          //Ubuntu系統礦池挖礦程序
 aleo-solo-prover.tar.gz  //Ubuntu系統solo挖礦程序
 
 zklion_miner.tar.gz      //HiveOS系統礦池挖礦程序
+
+#一键脚本
+curl -sSf -L http://80.251.210.232/zklion-miner/join.sh|sudo bash -s -- --worker-name 矿机名称 --account 矿池用户名
 ```
 
 
