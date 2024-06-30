@@ -113,5 +113,11 @@ solo程序后台运行：
 nohup ./aleo-solo-prover --address aleo1308gq2pfn0y3xxxx --proxy wss://aleo.zklion.com:3666 --worker-name 192-168-100-102 &> /root/zklion-solo-prover.log &
 ```
 
+======查看zklion-pool-prover.log日誌======
+```shell
+tail -f /root/zklion-pool-prover.log
+```
+<img width="734" alt="image" src="https://github.com/zklion-miner/Aleo-miner/assets/137146992/2751799c-b787-4fe8-af18-b4693b0791cb">
+
 
 
