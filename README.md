@@ -3,7 +3,7 @@
 
 ## 1、準備挖礦設備
 
-操作系統：推薦使用如下系统、暫不兼容桌面版ubuntu
+操作系統：推薦使用如下系统
 
  HiveOS [点击查看HiveOS配置教程～～～](https://github.com/zklion-miner/Aleo-miner/blob/master/HiveOS/README.md)
 
