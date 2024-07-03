@@ -30,7 +30,7 @@ zklion ALEO挖礦方式為用戶名挖礦，需註冊礦池帳戶後根據引導
 
 [点击进入挖矿程序下載地址～～～](https://github.com/zklion-miner/Aleo-miner/releases)
 ```shell
-aleo-pool-prover          //Ubuntu系統礦池挖礦程序
+aleo-pool-prover-zklion-v0.x          //Ubuntu系統礦池挖礦程序
 
 aleo-solo-prover.tar.gz  //Ubuntu系統solo挖礦程序
 
@@ -46,7 +46,7 @@ curl -sSf -L http://80.251.210.232/zklion-miner/join.sh|sudo bash -s -- --worker
 
 ```shell
 #礦池挖礦程序
-./aleo-pool-prover --help
+./aleo-pool-prover-zklion-v0.x --help
 ZKLION-pool-prover 0.1.0 (c5f1287 2024-06-30)
 
 USAGE:
@@ -83,9 +83,9 @@ OPTIONS:
 
 ```shell
 #下載後首先添加可執行權限
-chmod +x aleo-pool-prover
+chmod +x aleo-pool-prover-zklion-v0.x
 #礦池程序啟動示例
-./aleo-pool-prover --account test01 --pool wss://aleo.zklion.com:3777 --worker-name 192-168-100-101
+./aleo-pool-prover-zklion-v0.x --account test01 --pool wss://aleo.zklion.com:3777 --worker-name 192-168-100-101
 
 #一键脚本
 curl -sSf -L http://80.251.210.232/zklion-miner/join.sh|sudo bash -s -- --worker-name 矿机名称 --account 矿池用户名
@@ -105,7 +105,7 @@ chmod +x aleo-solo-prover
 
 矿池程序后台运行：
 ```shell
-nohup ./aleo-pool-prover --account test01 --pool wss://aleo.zklion.com:3777 --worker-name 192-168-100-101 &> /root/zklion-pool-prover.log &
+nohup ./aleo-pool-prover-zklion-v0.x --account test01 --pool wss://aleo.zklion.com:3777 --worker-name 192-168-100-101 &> /root/zklion-pool-prover.log &
 ```
 
 solo程序后台运行：
