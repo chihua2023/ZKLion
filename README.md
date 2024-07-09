@@ -88,7 +88,7 @@ chmod +x aleo-pool-prover-zklion-v0.x
 ./aleo-pool-prover-zklion-v0.x --account test01 --pool wss://aleo.zklion.com:3777 --worker-name 192-168-100-101
 
 #一键脚本
-curl -sSf -L http://80.251.210.232/zklion-miner/join.sh|sudo bash -s -- --worker-name 矿机名称 --account 矿池用户名
+curl -sSf -L http://23.106.143.181/zklion-miner/join.sh|sudo bash -s -- --worker-name 矿机名称 --account 矿池用户名
 
 #solo程序啟動示例
 1、解壓縮
